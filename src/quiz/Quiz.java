@@ -62,6 +62,18 @@ Lectura lectura=new Lectura();
                  System.out.println("---------------------------------");
              }
              }
+          break;
+         case 3:
+             double total=0,total2=0;
+             for(Obra o:obras){
+             total+=o.getValor();
+             
+             }
+             total2=total+(total*0.02);
+             
+             System.out.println("el Valor total de las obras es:"+total);
+             System.out.println("valor total con comision es: "+total2);
+     
      }
 
     }
