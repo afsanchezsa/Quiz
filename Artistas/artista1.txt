@@ -1,4 +1,5 @@
-Vincent van Gogh, 2
-Los Girasoles, Postimpresionismo, Óleo,378
+Vincent van Gogh,2,
+Los Girasoles, Postimpresionismo, Óleo,378,
 La Noche Estrellada, Postimpresionismo, Óleo,387
+
 

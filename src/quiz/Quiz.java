@@ -27,15 +27,17 @@ public class Quiz {
         
         System.out.println("Marque una opcion");
         System.out.println("1.Ver las obras");
+        System.out.println("2. Ver Obras segun Artista");
 Lectura lectura=new Lectura();
-  ArrayList<Obra>obras=null;
+  ArrayList<Obra>obras=new ArrayList<>();
         try {
             obras=lectura.LeerArchivos();
         } catch (FileNotFoundException ex) {
             System.out.println(ex.getMessage());
         }
-     Scanner entrada=new Scanner(System.in);
-     int opcion=entrada.nextInt();
+     Scanner entry=new Scanner(System.in);
+     int opcion=entry.nextInt();
+     entry.nextLine();//se comporta de forma extraña un nextLine luego de nextInt por eso pongo un nextLine vacio
      switch(opcion){
          case 1:
              for(Obra o: obras){
@@ -43,7 +45,22 @@ Lectura lectura=new Lectura();
                  System.out.println("Nombre"+o.getNombre());
                  System.out.println("Estilo:"+o.getEstilo());
                  System.out.println("Tecnica"+o.getTecnica());
-             
+                 System.out.println("Valor"+o.getValor());
+                 System.out.println("----------------------------------");
+             }
+             break;
+         case 2:
+             System.out.println("digite el nombre del artista");
+             String nombre=entry.nextLine();
+             System.out.println("el artista"+nombre+"Tiene las siguientes obras");
+             for(Obra o:obras){
+             if(o.getNombreArtista().equalsIgnoreCase(nombre)){
+                 System.out.println("Obra:"+o.getNombre());
+                 System.out.println("Estilo"+o.getEstilo());
+                 System.out.println("Tecnica"+o.getTecnica());
+                 System.out.println("valor"+o.getValor());
+                 System.out.println("---------------------------------");
+             }
              }
      }
 

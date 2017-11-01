@@ -23,7 +23,15 @@ public class Lectura {
     public ArrayList<Obra> LeerArchivos() throws FileNotFoundException{
     ArrayList<Obra>obras=new ArrayList<>();
         String[] Archivos=null;
-    Galeria galeria=new Galeria();
+     String NombreArtista;
+     String Obras;   
+     int numeroobras;
+     String NombreObra;
+     String Estilo;
+     String Tecnica;
+     String Precio;
+     double preciofinal;
+     Galeria galeria=new Galeria();
          
     File carpeta=new File("Artistas");
     if(carpeta.isDirectory()){
@@ -34,14 +42,16 @@ public class Lectura {
     Id++;
     Scanner entrada=new Scanner(new File("Artistas/"+s));
     entrada.useDelimiter(",");
-    String NombreArtista=entrada.next();
-    int numeroobras=entrada.nextInt();
+     NombreArtista=entrada.next();
+    Obras=entrada.next();
+//    numeroobras=Integer.parseInt(Obras);
     while(entrada.hasNext()){
-    String NombreObra=entrada.next();
-    String Estilo=entrada.next();
-    String Tecnica=entrada.next();
-    double Precio=entrada.nextDouble();
-    obras.add(new Obra(NombreObra,Estilo,Tecnica,Precio,new Artista(NombreArtista,NombreArtista,Id,galeria,new Account(NombreArtista))));
+     NombreObra=entrada.next();
+     Estilo=entrada.next();
+    Tecnica=entrada.next();
+    Precio=entrada.next();
+    preciofinal=Double.parseDouble(Precio);
+    obras.add(new Obra(NombreObra,Estilo,Tecnica,preciofinal,new Artista(NombreArtista,NombreArtista,Id,galeria,new Account(NombreArtista))));
     }
     
     
