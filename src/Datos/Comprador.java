@@ -30,4 +30,4 @@ private ArrayList<Obra>Obrascompradas;
     
     }
     
-}
+

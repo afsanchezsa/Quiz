@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Artista extends Usuario {
 private ArrayList<Obra>obras;
-    public Artista(String Nombre, String Usuario, int Id, Galeria galeria,Cuenta cuenta) {
+    public Artista(String Nombre, String Usuario, int Id, Galeria galeria,Account cuenta) {
         super(Nombre, Usuario, Id, galeria,cuenta);
         this.obras=new ArrayList<>();
     }

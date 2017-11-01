@@ -13,7 +13,7 @@ public class PSE extends Pago{
 
     @Override
     public boolean validar() {
-        
+       return true; 
     }
     
 }

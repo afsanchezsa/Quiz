@@ -13,7 +13,7 @@ public class TarjetaCredito extends Pago{
 
     @Override
     public boolean validar() {
-        
+        return true;
     }
         
 }
